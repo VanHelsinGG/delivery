@@ -1,8 +1,12 @@
 <?php
+    namespace Modules;
+    use mysqli;
+    use Exception;
+
     include ("main.php");
 
     class MySQL{
-        public $db;
+        private $db;
 
         public function __construct() {
             try{
@@ -75,6 +79,7 @@
                 return $affectedRows;
             }
         }
+
     }
 
 ?>
