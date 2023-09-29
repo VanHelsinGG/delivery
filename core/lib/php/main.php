@@ -5,6 +5,7 @@
 
     const NAME = "delivery";
     const VERSION = "0.1";
+    const AUTH_HASH_PASSWORD = "s@br1n3";
     
     /* DEFINIÇÕES MYSQL */
 

@@ -15,4 +15,6 @@ export class Functions {
             element.attr('type', currentType === 'password' ? 'text' : 'password');
         }
     }
+
+        
 }
