@@ -7,11 +7,11 @@
             return password_hash($input,PASSWORD_BCRYPT);
         }
 
-        public function setCookie($cookieName, $value, $expiration){
+        public static function setCookie($cookieName, $value, $expiration){
             return setcookie($cookieName,$value,$expiration,"/");
         }
 
-        private function _transformTime($value, $option) {
+        public function _transformTime($value, $option) {
             $multipliers = [
                 "d" => 3600 * 24, // 1 day = 24 hours * 3600 seconds
                 "h" => 3600,      // 1 hour = 3600 seconds
@@ -22,7 +22,7 @@
         }
 
         public function transformTime($value, $option){
-            return _transformTime($value,$option) + time();
+            return self::_transformTime($value,$option) + time();
         }
 
         public function Log($file, $text)

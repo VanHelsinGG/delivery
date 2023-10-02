@@ -3,7 +3,7 @@
     include("../main.php");
 
     class Auth{
-        private 
+    
     }
 
 ?>
