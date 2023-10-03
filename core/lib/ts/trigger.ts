@@ -1,14 +1,14 @@
-import $ from 'jquery'
-import * as func from "./functions";
+import $ from 'jquery';
+import { Cookies } from './functions';
 
-$('#aceitar-cookies').on('click', function () {
-    func.Cookies.acceptCookie(true);
-});
+$(function () {
+    $('#aceitar-cookies').on('click', function () {
+        Cookies.acceptCookie(true);
+    });
 
-$('#recusar-cookies').on('click', function () {
-    func.Cookies.acceptCookie(false);
-});
+    $('#recusar-cookies').on('click', function () {
+        Cookies.acceptCookie(false);
+    });
 
-$(document).on('ready', function() {
-    func.Cookies.toggleCookieAlert();
+    Cookies.toggleCookieAlert();
 });

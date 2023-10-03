@@ -28,7 +28,7 @@
         public function Log($file, $text)
         {
             if (ENABLE_LOG) {
-                $file = fopen($_SERVER['DOCUMENT_ROOT'] . "/delivery/core/logs/$file.txt", "a");
+                $file = fopen($_SERVER['DOCUMENT_ROOT'] . "/delivery/core/logs/$file.log", "a");
 
                 if(!$file){
                     throw new Exception("O arquivo '$file.txt' não foi encontrado!");
