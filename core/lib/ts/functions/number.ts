@@ -24,7 +24,7 @@ export class NumberUtil {
     }
 
     /** TODO: fazer funcionar */
-    public static getPercentage(finalValue: number, initialValue: number): number {
-        return (initialValue * 100) / finalValue;
+    public static getPercentage(initialValue: number, finalValue: number): string {
+        return Math.floor((finalValue / initialValue) * 100) + '%';
     }
 }
