@@ -23,7 +23,6 @@ export class NumberUtil {
         return Number(result.toFixed(2));
     }
 
-    /** TODO: fazer funcionar */
     public static getPercentage(initialValue: number, finalValue: number): string {
         return Math.floor((finalValue / initialValue) * 100) + '%';
     }

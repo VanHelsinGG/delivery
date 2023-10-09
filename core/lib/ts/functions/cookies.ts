@@ -1,15 +1,15 @@
 export class CookiesUtil {
-    public static getCookiePreference(): boolean {
+    public static getPreference(): boolean {
         return !!localStorage.getItem('cookie');
     }
 
-    public static acceptCookie(preference: boolean): void {
+    public static accept(preference: boolean): void {
         localStorage.setItem('cookie', preference ? 'true' : 'false');
-        this.toggleCookieAlert();
+        this.toggleAlert();
     }
 
-    public static toggleCookieAlert(): void {
+    public static toggleAlert(): void {
         const avisoCookie = $('#aviso-cookie');
-        avisoCookie.toggle(!this.getCookiePreference());
+        avisoCookie.toggle(!this.getPreference());
     }
 }
